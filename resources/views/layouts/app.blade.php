@@ -47,10 +47,21 @@
             </div>
         </header>
 
+        <!-- Hero Section -->
+        <section class="bg-blue-900 text-white py-20">
+            <div class="container mx-auto text-center">
+                <h1 class="text-4xl sm:text-5xl font-bold leading-tight mb-4">Welcome to the AI Hub</h1>
+                <p class="text-lg sm:text-xl mb-8">Explore the cutting-edge world of Artificial Intelligence with our insightful articles and resources.</p>
+                <a href="/blog" class="bg-white text-blue-900 font-bold py-2 px-6 rounded-full uppercase tracking-wide hover:bg-gray-100 hover:text-blue-900">Discover More</a>
+            </div>
+        </section>
+
+        <!-- Content Section -->
         <div>
             @yield('content')
         </div>
 
+        <!-- Footer Section -->
         <div>
             @include('layouts.footer')
         </div>
