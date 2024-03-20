@@ -3,7 +3,7 @@
 @section('content')
 <div class="w-4/5 m-auto text-left">
     <div class="py-15">
-        <h1 class="text-6xl">
+        <h1 class="text-4xl sm:text-6xl font-bold">
             Create Post
         </h1>
     </div>
@@ -13,7 +13,7 @@
     <div class="w-4/5 m-auto">
         <ul>
             @foreach ($errors->all() as $error)
-                <li class="w-1/5 mb-4 text-gray-50 bg-red-700 rounded-2xl py-4">
+                <li class="w-full md:w-2/5 mb-4 text-gray-800 bg-red-200 rounded-lg py-2 px-4">
                     {{ $error }}
                 </li>
             @endforeach
@@ -21,7 +21,7 @@
     </div>
 @endif
 
-<div class="w-4/5 m-auto pt-20">
+<div class="w-4/5 m-auto pt-10">
     <form 
         action="/blog"
         method="POST"
@@ -32,18 +32,16 @@
             type="text"
             name="title"
             placeholder="Title..."
-            class="bg-transparent block border-b-2 w-full h-20 text-6xl outline-none">
+            class="bg-gray-100 placeholder-gray-500 rounded-lg py-3 px-4 mb-6 w-full text-xl">
 
         <textarea 
             name="description"
             placeholder="Description..."
-            class="py-20 bg-transparent block border-b-2 w-full h-60 text-xl outline-none"></textarea>
+            class="bg-gray-100 placeholder-gray-500 rounded-lg py-3 px-4 mb-6 w-full h-40 text-xl"></textarea>
 
-        <div class="bg-grey-lighter pt-15">
-            <label class="w-44 flex flex-col items-center px-2 py-3 bg-white-rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer">
-                <span class="mt-2 text-base leading-normal">
-                    Select a file
-                </span>
+        <div class="bg-gray-100 py-3 px-4 rounded-lg mb-6">
+            <label class="cursor-pointer">
+                <span class="text-lg font-semibold">Select Image:</span>
                 <input 
                     type="file"
                     name="image"
@@ -53,7 +51,7 @@
 
         <button    
             type="submit"
-            class="uppercase mt-15 bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+            class="uppercase bg-blue-500 hover:bg-blue-600 text-white text-lg font-bold py-3 px-6 rounded-lg">
             Submit Post
         </button>
     </form>
